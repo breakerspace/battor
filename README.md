@@ -64,26 +64,8 @@ The firmware currently only builds on Linux. The BattOr software must be in $PAT
 
 **Usage**
 
-To stream samples from the BattOr over USB, run the following on the command line.
-You will need to specify the tty file for the BattOr (e.g., /dev/ttyUSB* for Linux
-/dev/cu.usbserial* for Mac and /dev/ttyS* for Cygwin).
-Likely you will want to redirect the output to a file.
-
-    $ battor -s <tty>
-
-To start buffering power measurements, run the following on the command line.
-Once the BattOr has a blinking *RED* LED, it can be disconnected from USB so power can
-be measured while on the move.
-
-    $ battor -b <tty>
-
-To end buffering and download the trace, run the following on the command line.
-Often you will want to redirect the output to a file. The BattOr will have a
-solid *RED* LED until the download is completed. Note that currently
-downloading buffered power measurements takes approximately 1/4 of time that
-the samples were buffered.
-
-    $ battor -d <tty>
+There is only currently one mode of operation, USB mode from `/dev/ttyUSB0`.
+Simply run `battor` or `sudo battor`.
 
 ### Portable operation mode
 
